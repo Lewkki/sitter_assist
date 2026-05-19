@@ -2,21 +2,33 @@ import { Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        paddingTop: 30,
-        paddingLeft: 30,
-      }}
-    >
-      <Text
+    <View>
+      <View
         style={{
-          fontSize: 35,
-          fontWeight: "700",
-          color: "#111",
+          paddingTop: 30,
         }}
       >
-        Hello Emerson,
-      </Text>
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: 35,
+            fontWeight: "700",
+            color: "#111",
+          }}
+        >
+          Hello, Emerson
+        </Text>
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: 18,
+            fontWeight: "200",
+          }}
+        >
+          {" "}
+          Drive safe my love.
+        </Text>
+      </View>
     </View>
   );
 }

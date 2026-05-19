@@ -79,7 +79,8 @@ export default function Index() {
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          paddingBottom: 140,
+          paddingTop: 260,
+          paddingBottom: 20,
         }}
       >
         <View
@@ -159,6 +160,36 @@ export default function Index() {
             0 mi
           </Text>
         </View>
+      </View>
+
+      <View
+        style={{
+          justifyContent: "center",
+          backgroundColor: "#e0dede",
+          borderRadius: 20,
+          minHeight: 100,
+          marginBottom: 30,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 15,
+            fontWeight: "bold",
+            marginLeft: 25,
+            paddingBottom: 7,
+          }}
+        >
+          💌 Note from Luke
+        </Text>
+        <Text
+          style={{
+            fontSize: 14,
+            fontWeight: "300",
+            marginLeft: 25,
+          }}
+        >
+          Have an amazing day at work my sweet angel.
+        </Text>
       </View>
     </View>
   );

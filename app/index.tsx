@@ -21,7 +21,17 @@ export default function Index() {
             color: "#222222",
           }}
         >
-          Hello, Emerson
+          Hello,
+          <Text
+            style={{
+              fontSize: 38,
+              fontWeight: "700",
+              color: "#F4B6C2",
+            }}
+          >
+            {" "}
+            Emerson
+          </Text>
         </Text>
         <Text
           style={{
@@ -30,7 +40,6 @@ export default function Index() {
             fontWeight: "200",
           }}
         >
-          {" "}
           Drive safe my love.
         </Text>
       </View>

@@ -1,13 +1,14 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
+  const [isDriving, setIsDriving] = useState(false);
+  const handleDriveToggle = () => {
+    setIsDriving(!isDriving);
+  };
+
   return (
-    <View
-      style={{
-        flex: 1,
-        paddingHorizontal: 24,
-      }}
-    >
+    <View style={styles.screen}>
       <View
         style={{
           paddingTop: 50,
@@ -52,13 +53,14 @@ export default function Index() {
         }}
       >
         <TouchableOpacity
+          onPress={handleDriveToggle}
           style={{
             width: 260,
             height: 260,
             borderRadius: 130,
             borderColor: "#ffffff",
             borderWidth: 7,
-            backgroundColor: "#F4B6C2",
+            backgroundColor: isDriving ? "#f04141" : "#F4B6C2",
 
             justifyContent: "center",
             alignItems: "center",
@@ -79,7 +81,7 @@ export default function Index() {
               color: "#fff",
             }}
           >
-            START DRIVE
+            {isDriving ? "STOP DRIVE" : "START DRIVE"}
           </Text>
         </TouchableOpacity>
       </View>
@@ -180,6 +182,7 @@ export default function Index() {
           marginBottom: 30,
         }}
       >
+        i
         <Text
           style={{
             fontSize: 15,
@@ -203,3 +206,10 @@ export default function Index() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    paddingHorizontal: 24,
+  },
+});
